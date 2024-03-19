@@ -20,13 +20,15 @@
 
   // color
   --color-dark-900: #292e3d;
+  --color-pink-100: #fff9ed;
   --color-yellow-900: #936400;
-  --color-yellow-400: #E1A932;
+  --color-yellow-400: #e1a932;
   --color-white: #fff;
   --color-black: #312a27;
+  --color-gray-50:  #e0e0e0;
 
   //  radius
   --radius-main: 8px;
 
-  --gradient-white: linear-gradient(90.00deg, rgb(249, 242, 231) 25.667%,rgba(231, 243, 249, 0) 100%);
+  --gradient-white: linear-gradient(90deg, rgb(249, 242, 231) 25.667%, rgba(231, 243, 249, 0) 100%);
 }

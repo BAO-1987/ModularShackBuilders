@@ -1,0 +1,36 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.modular {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: (64) 0;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 493px;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 596px;
+    overflow: hidden;
+    border-radius: calc(var(--radius-main) * 4);
+
+    img {
+      height: 100%;
+    }
+  }
+
+  h2 {
+    margin-bottom: 32px;
+  }
+
+  p {
+    &:first-of-type {
+      margin-bottom: 32px;
+    }
+  }
+}

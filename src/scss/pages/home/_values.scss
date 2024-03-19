@@ -1,0 +1,86 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.values {
+  background-color: var(--color-pink-100);
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(49) 24px;
+
+    @include media(mobile-l) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    &::before {
+      content: "";
+      position: relative;
+      align-self: flex-start;
+      margin-bottom: 24px;
+      height: 48px;
+      width: 48px;
+      background-image: url("../images/icons/heart.svg");
+      background-position: 0 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &:first-of-type {
+      width: 100%;
+      max-width: 286px;
+
+      p {
+        font-size: 20px;
+      }
+
+      &::before {
+        content: none;
+      }
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    &--integrity {
+      &::before {
+        background-image: url("../images/icons/integry.svg");
+      }
+    }
+
+    &--quality {
+      &::before {
+        background-image: url("../images/icons/quality.svg");
+      }
+    }
+
+    &--reliability {
+      &::before {
+        background-image: url("../images/icons/reliability.svg");
+      }
+    }
+
+    &--innovation {
+      &::before {
+        background-image: url("../images/icons/innovation.svg");
+      }
+    }
+
+    &--customer {
+      &::before {
+        background-image: url("../images/icons/heart.svg");
+      }
+    }
+  }
+
+  h2,
+  h3 {
+    margin-bottom: 24px;
+  }
+}
