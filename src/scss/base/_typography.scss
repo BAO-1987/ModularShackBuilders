@@ -1,0 +1,42 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+h1,
+h2,
+h3 {
+  overflow: hidden;
+  font-weight: var(--fw-600);
+  font-size: clamp(28px, 1.5rem + 1.6667vi, 48px);
+  line-height: 1.27;
+}
+
+h1 {
+  margin-bottom: 24px;
+}
+
+h2 {
+  margin-bottom: 2.4rem;
+  font-size: clamp(28px, 1.5rem + 1.6667vi, 48px);
+  font-size: clamp(24px, 1.3333rem + 1.0185vi, 36px);
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: clamp(18px, 1.1667rem + 0.3704vi, 24px);
+  line-height: 1;
+}
+
+p {
+  font-size: 20px;
+  opacity: 0.86;
+}
+
+.sub-text {
+  font-size: clamp(16px, 0.8571rem + 0.7143vi, 24px);
+
+  @include media(tablet) {
+    br {
+      display: none;
+    }
+  }
+}
