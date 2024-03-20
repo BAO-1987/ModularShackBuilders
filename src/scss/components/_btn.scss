@@ -7,8 +7,8 @@
   align-items: center;
   justify-content: center;
   border: 1px solid transparent;
-  border-radius: calc(var(--radius-big) - 4px);
-  padding: 10px 16px;
+  border-radius: calc(var(--radius-big) * 1.56);
+  padding: 18px 23px;
   width: 100%;
   max-width: fit-content;
   height: max-content;
@@ -16,14 +16,14 @@
   font-size: 18px;
   line-height: 1;
   color: var(--color-white);
-  background-color: var(--color-yellow-900);
+  background-color: var(--color-yellow-400);
   transition-property: background-color, color, border-color;
   transition-duration: 0.3s;
 
   &:hover,
   &:focus {
-    border-color: var(--color-yellow-900);
-    color: var(--color-yellow-900);
+    border-color: var(--color-yellow-400);
+    color: var(--color-yellow-400);
     background-color: var(--color-white);
   }
 
@@ -52,15 +52,25 @@
     }
   }
 
-  &--sing {
+  &--sing,
+  &--request {
+    border-radius: calc(var(--radius-main) * 4);
+    padding: 10px 16px;
     color: var(--color-yellow-900);
     background-color: var(--color-white);
     border-color: var(--color-yellow-900);
   }
 
-  // &--big {
-  //   max-width: 190px;
-  // }
+  &--request {
+    color: var(--color-white);
+    background-color: var(--color-yellow-900);
+    border-color: transparent;
+  }
+
+  &--big {
+    max-width: 173px;
+    margin: 0 auto;
+  }
 
   //   &--slider {
   //   position: relative;

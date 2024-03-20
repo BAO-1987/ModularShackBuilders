@@ -7,7 +7,7 @@
   z-index: 10;
   padding: 20px 0;
   width: 100%;
-  background-color: var(--color-pink-100);
+  background-color: var(--color-white);
   transition-property: transform, box-shadow;
   transition-duration: 0.15s;
 
@@ -16,7 +16,7 @@
   }
 
   &.scroll {
-    box-shadow: 0 0 16px 0 var(--color-blue-800);
+    box-shadow: 0 0 16px 0 var(--color-yellow-400);
   }
 
   @include media(tablet) {

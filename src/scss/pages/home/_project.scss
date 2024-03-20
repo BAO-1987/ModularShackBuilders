@@ -1,0 +1,47 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.project {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: rem(48);
+    gap: 24px;
+  }
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+    border-radius: calc(var(--radius-main) * 4);
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      border-radius: 8px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgb(0, 0, 0) 125.647%);
+      z-index: 1;
+      inset: 0;
+    }
+
+    h3 {
+      font-size: clamp(18px, 1rem + 0.5556vi, 24px);
+      line-height: 1.5;
+      letter-spacing: 0.02em;
+      color: var(--color-white);
+      z-index: 1;
+      position: absolute;
+      padding: 0 24px;
+      margin: 0 auto;
+      bottom:24px;
+    }
+  }
+
+  .btn {
+    margin: 0 auto;
+  }
+
+  .title {
+    margin-bottom: rem(50);
+  }
+}

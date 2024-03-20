@@ -2,89 +2,96 @@
 @use "../utils/mixins/" as *;
 
 .contact {
-  $root: &;
+  position: relative;
 
-  padding: 1.8rem 0;
-
-  &__content {
-    margin-bottom: 2.4rem;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-yellow-900);
   }
 
   &__inner {
-    border-radius: var(--radius-big);
-    padding: 3rem 1rem;
-    width: 100%;
-    max-width: 1100px;
-    box-shadow: 0 0 60px 0 rgba(188, 247, 255, 0.12);
-    text-align: center;
-    color: var(--color-white);
-    background-color: var(--color-blue-800);
-    margin-inline: auto;
-
-    h2 {
-      margin-bottom: 16px;
-    }
-
-    p {
-      line-height: 1;
-    }
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
 
   &__form {
     width: 100%;
-    max-width: 556px;
+    max-width: 596px;
     margin-inline: auto;
 
     label {
       display: block;
       text-align: left;
 
-      span {
-        display: block;
-        margin-bottom: 6px;
-        font-size: 16px;
-        line-height: 1.75;
-      }
-
       &:not(:last-of-type) {
-        margin-bottom: 24px;
+        margin-bottom: 16px;
       }
 
       &:last-of-type {
-        margin-bottom: 18px;
+        margin-bottom: 28px;
       }
     }
 
     textarea,
     input {
-      border: 1px solid rgba(255, 243, 249, 0.36);
-      border-radius: 8px;
-      padding: 12px 16px;
+      border-color: transparent;
+      border-radius: 28px;
+      padding: 16px;
       width: 100%;
-      height: 42px;
-      font-size: 14px;
-      line-height: 1.2;
-      color: var(--color-white);
-      background-color: var(--color-blue-800);
+      height: 48px;
+
+      background-color: var(--color-yellow-50);
 
       &::placeholder {
-        color: rgba(255, 243, 249, 0.36);
+        opacity: 0.64;
+        font-size: 16px;
+        line-height: 1;
       }
     }
 
     textarea {
-      height: 96px;
+      height: 156px;
       resize: none;
     }
   }
 
-  .btn {
-    max-width: 109px;
-    margin-inline: auto;
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    translate: -11px 32px;
 
-    &:hover,
-    &:focus {
-      background-color: var(--color-pink-400);
+    h3 {
+      margin-bottom: 28px;
+      font-size: 20px;
     }
+
+    a {
+      margin-bottom: 28px;
+      font-size: 15px;
+      line-height: 1.4;
+      text-decoration: underline;
+      color: var(--color-yellow-900);
+    }
+
+    ul {
+      font-size: 16px;
+      line-height: 1.4;
+      letter-spacing: -0.03em;
+    }
+  }
+
+  h2 {
+    margin-bottom: 32px;
+  }
+
+  .btn {
+    max-width: 100%;
   }
 }

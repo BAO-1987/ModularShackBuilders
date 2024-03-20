@@ -55,29 +55,31 @@
     gap: 8px;
   }
 
+  &--footer {
+    width: 100%;
+    max-width: 1247px;
+    margin: 0 auto;
+    padding: 0 16px;
 
-  // &--footer {
-  //   #{$root}__list {
-  //     margin-right: 13px;
-  //     padding-top: 6px;
-  //     display: block;
-  //     columns: 2;
-  //     gap: 3.5rem;
+    #{$root}__list {
+      @include media(mobile-m) {
+        margin: 0;
+      }
+    }
 
-  //     @include media(mobile-m) {
-  //       margin: 0;
-  //     }
-  //   }
+    // #{$root}__item {
+    //   &:not(:last-of-type) {
+    //     margin: 0 0 26px 0;
+    //   }
+    // }
 
-  //   #{$root}__item {
-  //     &:not(:last-of-type) {
-  //       margin: 0 0 26px 0;
-  //     }
-  //   }
+    @include media(mobile-m) {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
 
-  //   @include media(mobile-m) {
-  //     flex-direction: column;
-  //     justify-content: center;
-  //   }
-  // }
+  #{$root}__link {
+    background-color: transparent;
+  }
 }
