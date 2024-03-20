@@ -2,10 +2,42 @@
 @use "../../utils/mixins/" as *;
 
 .service {
+  $root: &;
+
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: rem(48);
     gap: 24px;
+  }
+
+  .title {
+    margin-bottom: 32px;
+
+    + p {
+      margin-bottom: rem(87);
+      text-align: center;
+    }
+  }
+
+  &--main {
+    margin-bottom: 86px;
+
+    #{$root}__list {
+      margin-bottom: 0;
+    }
+
+    &.garden,
+    &.mobile {
+      margin-bottom: 64px;
+    }
+  }
+
+  &.mobile {
+    .title {
+      + p {
+        margin-bottom: rem(84);
+      }
+    }
   }
 }

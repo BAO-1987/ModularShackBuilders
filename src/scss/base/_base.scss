@@ -36,7 +36,8 @@ body {
   }
 }
 
-.section {
+.section,
+.background {
   padding: rem(86) 0;
 
   @include media(tablet) {
@@ -44,16 +45,15 @@ body {
   }
 }
 
-.container,
-.wrapper {
+.background {
+  background-color: var(--color-yellow-50);
+}
+
+.container {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   width: 100%;
   max-width: var(--container-width);
-}
-
-.wrapper {
-  max-width: 832px;
 }
 
 .site-container {
@@ -70,16 +70,18 @@ body {
 .logo {
   width: 100%;
   max-width: 325px;
+  margin-right: 10px;
 
   &--footer {
     margin-right: 0 !important;
   }
 
+
   @include media(tablet-wide) {
-    margin-right: 15px;
+    max-width: 300px;
   }
 
-  @include media(mobile-m) {
-    max-width: 200px;
+  &__img {
+    width: 100%;
   }
 }

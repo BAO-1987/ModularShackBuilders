@@ -18,6 +18,12 @@
     justify-content: space-between;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+
+    @include media(mobile-m) {
+      padding-bottom: 40px;
+      justify-content: center;
+      grid-template-columns: 1fr;
+    }
   }
 
   &__form {
@@ -84,6 +90,10 @@
       font-size: 16px;
       line-height: 1.4;
       letter-spacing: -0.03em;
+    }
+
+    @include media(mobile-m) {
+      transform: none;
     }
   }
 

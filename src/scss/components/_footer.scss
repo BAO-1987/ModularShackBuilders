@@ -6,7 +6,7 @@
 
   &__top {
     background-color: var(--color-yellow-50);
-    padding: rem(56) 0;
+    padding: rem(54) 0;
   }
 
   &__bottom {
@@ -15,8 +15,10 @@
     justify-content: space-between;
     padding: 24px 0;
 
-    @include media(mobile-m) {
+    @include media(mobile-l) {
       flex-direction: column;
+      align-items: center;
+      text-align: center;
       gap: 16px;
     }
   }
