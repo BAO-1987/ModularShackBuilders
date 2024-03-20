@@ -1,0 +1,62 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.benefits {
+  &__list {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--color-gray-50);
+    border-radius: calc(var(--radius-main) * 4);
+    padding: rem(30);
+    height: 100%;
+
+    &::before {
+      content: "";
+      position: relative;
+      align-self: flex-start;
+      margin-bottom: 24px;
+      width: 48px;
+      height: 48px;
+      background-image: url("../images/icons/bubble.svg");
+      background-position: 0 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    &--response {
+      &::before {
+        background-image: url("../images/icons/bubble.svg");
+      }
+    }
+
+    &--quality {
+      &::before {
+        background-image: url("../images/icons/quality.svg");
+      }
+    }
+
+    &--pricing {
+      &::before {
+        background-image: url("../images/icons/price.svg");
+      }
+    }
+
+    &--customer {
+      &::before {
+        background-image: url("../images/icons/people.svg");
+      }
+    }
+  }
+}
