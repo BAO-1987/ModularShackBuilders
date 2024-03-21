@@ -1,5 +1,5 @@
-@use "../../utils/functions/" as *;
-@use "../../utils/mixins/" as *;
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
 
 .service {
   $root: &;
@@ -38,15 +38,14 @@
     #{$root}__list {
       margin-bottom: 0;
     }
-
-    &.garden,
-    &.mobile {
-      margin-bottom: rem(64);
-
-      @include media(tablet) {
-        margin-bottom: 0;
-      }
+    @include media(tablet) {
+      margin-bottom: 0;
     }
+  }
+
+  &__garden,
+  &__mobile {
+    margin-bottom: rem(64);
 
     @include media(tablet) {
       margin-bottom: 0;
@@ -59,7 +58,7 @@
     }
   }
 
-  &.mobile {
+  &__mobile {
     .title {
       + p {
         margin-bottom: rem(84);

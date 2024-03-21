@@ -45,10 +45,11 @@
   }
 
   a {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     margin-top: auto;
     margin-bottom: 10px;
+    width: fit-content;
     font-size: 18px;
     line-height: 1;
     color: var(--color-yellow-900);
@@ -68,7 +69,7 @@
 
     &:hover {
       &::after {
-        transform: translateX(3px);
+        transform: translateX(4px);
       }
     }
   }

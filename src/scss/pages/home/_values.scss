@@ -28,8 +28,8 @@
       position: relative;
       align-self: flex-start;
       margin-bottom: 24px;
-      height: 48px;
       width: 48px;
+      height: 48px;
       background-image: url("../images/icons/heart.svg");
       background-position: 0 0;
       background-size: cover;
@@ -40,12 +40,16 @@
       width: 100%;
       max-width: 286px;
 
-      p {
-        font-size: 20px;
-      }
-
       &::before {
         content: none;
+      }
+
+      p {
+        font-size: clamp(16px, 1.0833rem + 0.1852vi, 20px);
+      }
+
+      @include media(mobile-m) {
+        max-width: 100%;
       }
     }
 

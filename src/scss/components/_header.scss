@@ -16,7 +16,7 @@
   }
 
   &.scroll {
-    box-shadow: 0 0 16px 0 var(--color-yellow-400);
+    box-shadow: 0 0 10px 0 var(--color-yellow-400);
   }
 
   @include media(tablet) {
