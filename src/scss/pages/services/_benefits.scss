@@ -7,6 +7,14 @@
     align-items: center;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
+
+    @include media(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media(mobile-m) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
@@ -62,6 +70,10 @@
 
   h2 {
     margin-bottom: rem(64);
+
+    @include media(tablet) {
+      margin-bottom: 32px;
+    }
   }
 
   h3 {

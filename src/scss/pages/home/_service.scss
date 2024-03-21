@@ -9,6 +9,14 @@
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: rem(48);
     gap: 24px;
+
+    @include media(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media(mobile-m) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .title {
@@ -17,11 +25,15 @@
     + p {
       margin-bottom: rem(87);
       text-align: center;
+
+      @include media(tablet) {
+        margin-bottom: 40px;
+      }
     }
   }
 
   &--main {
-    margin-bottom: 86px;
+    margin-bottom: rem(86);
 
     #{$root}__list {
       margin-bottom: 0;
@@ -29,7 +41,21 @@
 
     &.garden,
     &.mobile {
-      margin-bottom: 64px;
+      margin-bottom: rem(64);
+
+      @include media(tablet) {
+        margin-bottom: 0;
+      }
+    }
+
+    @include media(tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  &--home {
+    .title {
+      margin-bottom: rem(50);
     }
   }
 
@@ -37,6 +63,36 @@
     .title {
       + p {
         margin-bottom: rem(84);
+
+        @include media(tablet) {
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+
+  li {
+    &:last-child {
+      @include media(tablet) {
+        margin: 0 auto;
+        grid-column: 2 span;
+        max-width: 450px;
+
+        img {
+          aspect-ratio: 16/9;
+        }
+      }
+
+      @include media(mobile-m) {
+        margin: 0;
+        grid-column: auto;
+        max-width: 100%;
+      }
+    }
+
+    @include media(mobile-m) {
+      img {
+        aspect-ratio: 16/9;
       }
     }
   }

@@ -10,7 +10,10 @@
   height: 100%;
 
   &__content {
+    display: flex;
+    flex-direction: column;
     padding: 24px;
+    height: 100%;
   }
 
   img {
@@ -44,6 +47,7 @@
   a {
     display: flex;
     align-items: center;
+    margin-top: auto;
     margin-bottom: 10px;
     font-size: 18px;
     line-height: 1;
