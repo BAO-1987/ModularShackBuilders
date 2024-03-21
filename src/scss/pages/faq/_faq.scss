@@ -26,7 +26,7 @@
 
   summary {
     position: relative;
-    padding: 16px 24px;
+    padding: 16px 54px 16px 24px;
     font-weight: var(--fw-600);
     font-size: clamp(16px, 0.9583rem + 0.1852vi, 18px);
     line-height: 1;
@@ -53,12 +53,17 @@
     }
 
     + div {
-      padding: 0 54px 16px 23px;
+      padding: 0 24px 16px;
 
       p {
+        width: 97%;
         font-size: 16px;
         line-height: 1.6;
         opacity: 1;
+
+        @include media(mobile-m) {
+          width: 100%;
+        }
       }
     }
   }

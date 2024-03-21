@@ -5,6 +5,10 @@
   &__top {
     padding: rem(56) 0;
     background-color: var(--color-yellow-50);
+
+    @include media(mobile-l) {
+      padding: 30px 0;
+    }
   }
 
   &__bottom {

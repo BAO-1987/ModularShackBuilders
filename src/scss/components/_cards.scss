@@ -45,7 +45,7 @@
   }
 
   a {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     margin-top: auto;
     margin-bottom: 10px;
@@ -63,6 +63,13 @@
       background-position: 0 0;
       background-size: cover;
       background-repeat: no-repeat;
+      transition: transform 0.4s linear;
+    }
+
+    &:hover {
+      &::after {
+        transform: translateX(3px);
+      }
     }
   }
 
