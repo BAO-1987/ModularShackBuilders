@@ -17,38 +17,33 @@
     inset: 0;
 
     @include media(tablet) {
-      background-color: var(--color-white);
       width: 100%;
+      background-color: var(--color-white);
       opacity: 0.8;
     }
   }
 
   &__inner {
-    // padding-top: rem(113);
-    // padding-bottom: rem(108);
-
     position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: 646px;
-    z-index: 1;
 
     @include media(tablet) {
       min-height: 380px;
-      background-size: cover;
-      justify-content: center;
     }
   }
 
   &__content {
-    translate: 0 13px;
     width: 100%;
     max-width: 595px;
+    translate: 0 13px;
 
     @include media(tablet) {
-      translate: none;
       max-width: 100%;
+      translate: none;
     }
   }
 
@@ -61,8 +56,8 @@
   }
 
   .btn {
-    background-color: var(--color-white);
     color: var(--color-black);
+    background-color: var(--color-white);
   }
 
   @include media(tablet) {

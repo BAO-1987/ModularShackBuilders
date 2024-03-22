@@ -10,8 +10,8 @@
   border-radius: calc(var(--radius-big) * 1.56);
   padding: 18px 23px;
   width: 100%;
-  max-width: fit-content;
   height: max-content;
+  max-width: fit-content;
   font-weight: var(--fw-500);
   font-size: 18px;
   line-height: 1;
@@ -28,8 +28,8 @@
   }
 
   &.formsapp-button {
-    font-family: var(--font-family-primary);
     margin: 0;
+    font-family: var(--font-family-primary);
     background-color: var(--color-blue-800) !important;
 
     &:hover,
@@ -40,65 +40,23 @@
     }
   }
 
-  &--reverse {
-    border-color: var(--color-blue-800);
-    color: var(--color-blue-800);
-    background-color: var(--color-pink-100);
-
-    &:hover,
-    &:focus {
-      color: var(--color-pink-100);
-      background-color: var(--color-blue-800);
-    }
-  }
-
   &--sing,
   &--request {
+    border-color: var(--color-yellow-900);
     border-radius: calc(var(--radius-main) * 4);
     padding: 10px 16px;
     color: var(--color-yellow-900);
     background-color: var(--color-white);
-    border-color: var(--color-yellow-900);
   }
 
   &--request {
+    border-color: transparent;
     color: var(--color-white);
     background-color: var(--color-yellow-900);
-    border-color: transparent;
   }
 
   &--big {
-    max-width: 173px;
     margin: 0 auto;
+    max-width: 173px;
   }
-
-  //   &--slider {
-  //   position: relative;
-  //   z-index: 2;
-  //   padding: 0;
-  //   border: 0;
-  //   border-radius: 50%;
-  //   border-color: transparent;
-  //   background-color: transparent;
-  //   color: var(--color-white);
-  //   height: 32px;
-  //   max-width: 32px;
-
-  //   &::before {
-  //     @include mask;
-  //     width: 32px;
-  //     height: 32px;
-  //     mask-image: url("../images/icons/arrow.svg");
-  //     mask-position: 0 0;
-  //     background-color: var(--color-dark-900);
-  //   }
-
-  //   &:hover,
-  //   &:focus {
-  //     border-color: transparent;
-  //     &::before {
-  //       background-color: var(--color-blue-800);
-  //     }
-  //   }
-  // }
 }
