@@ -68,20 +68,15 @@ body {
 }
 
 .logo {
+  margin-right: 10px;
   width: 100%;
   max-width: 325px;
-  margin-right: 10px;
-
-  &--footer {
-    margin-right: 0;
-  }
-
-
-  @include media(tablet-wide) {
-    max-width: 300px;
-  }
 
   &__img {
     width: 100%;
+  }
+
+  @include media(tablet-wide) {
+    max-width: 300px;
   }
 }
