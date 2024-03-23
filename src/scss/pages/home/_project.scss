@@ -7,14 +7,6 @@
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: rem(48);
     gap: 24px;
-
-    @include media(mobile-l) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @include media(mobile-m) {
-      grid-template-columns: 1fr;
-    }
   }
 
   &__item {
@@ -43,28 +35,6 @@
       letter-spacing: 0.01em;
       color: var(--color-white);
     }
-
-    img {
-      @include media(mobile-m) {
-        width: 100%;
-        aspect-ratio: 16/9;
-      }
-    }
-
-    &:last-child {
-      @include media(mobile-l) {
-        grid-column: 2 span;
-
-        img {
-          width: 100%;
-          aspect-ratio: 16/9;
-        }
-      }
-
-      @include media(mobile-m) {
-        grid-column: auto;
-      }
-    }
   }
 
   .btn {
@@ -78,6 +48,40 @@
   @include media(tablet) {
     br {
       display: none;
+    }
+  }
+
+  @include media(mobile-l) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      &:last-child {
+        grid-column: 2 span;
+
+        img {
+          width: 100%;
+          aspect-ratio: 16/9;
+        }
+      }
+    }
+  }
+
+  @include media(mobile-m) {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      &:last-child {
+        grid-column: auto;
+      }
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 16/9;
     }
   }
 }

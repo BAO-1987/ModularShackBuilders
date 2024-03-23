@@ -16,11 +16,11 @@
     background: var(--gradient-white);
     inset: 0;
 
-    @include media(tablet) {
-      width: 100%;
-      background-color: var(--color-white);
-      opacity: 0.8;
-    }
+    // @include media(tablet) {
+    //   width: 100%;
+    //   background-color: var(--color-white);
+    //   opacity: 0.8;
+    // }
   }
 
   &__inner {
@@ -30,21 +30,12 @@
     flex-direction: column;
     justify-content: center;
     min-height: 646px;
-
-    @include media(tablet) {
-      min-height: 380px;
-    }
   }
 
   &__content {
     width: 100%;
     max-width: 574px;
     translate: 0 13px;
-
-    @include media(tablet) {
-      max-width: 100%;
-      translate: none;
-    }
   }
 
   h1 {
@@ -61,8 +52,20 @@
   }
 
   @include media(tablet) {
-    br {
-      display: none;
+    &::before {
+      width: 100%;
+      background-color: var(--color-white);
+      opacity: 0.8;
+    }
+
+    &__inner {
+      padding: 16px 0;
+      min-height: 380px;
+    }
+
+    &__content {
+      max-width: 100%;
+      translate: none;
     }
   }
 }

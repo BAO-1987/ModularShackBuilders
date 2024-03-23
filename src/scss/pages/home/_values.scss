@@ -8,15 +8,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: rem(49) 24px;
-
-    @include media(mobile-l) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-
-    @include media(mobile-m) {
-      grid-template-columns: 1fr;
-    }
   }
 
   &__item {
@@ -46,10 +37,6 @@
 
       p {
         font-size: clamp(16px, 1.0833rem + 0.1852vi, 20px);
-      }
-
-      @include media(mobile-m) {
-        max-width: 100%;
       }
     }
 
@@ -91,5 +78,26 @@
   h2,
   h3 {
     margin-bottom: 24px;
+  }
+
+  @include media(mobile-l) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+  }
+
+  @include media(mobile-m) {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @include media(mobile-m) {
+    &__item {
+      &:first-of-type {
+        max-width: 100%;
+      }
+    }
   }
 }

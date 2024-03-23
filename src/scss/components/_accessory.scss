@@ -9,30 +9,15 @@
     justify-content: space-between;
     gap: 24px;
 
-    @include media(tablet) {
-      flex-direction: column-reverse;
-      justify-content: center;
-      align-items: center;
-    }
-
     &--reverse {
       align-items: center;
       margin-bottom: rem(75);
-
-      @include media(tablet) {
-        flex-direction: column;
-        margin-bottom: 35px;
-      }
     }
   }
 
   &__content {
     width: 100%;
     max-width: 493px;
-
-    @include media(tablet) {
-      max-width: 100%;
-    }
   }
 
   &__image {
@@ -40,12 +25,6 @@
     border-radius: calc(var(--radius-main) * 4);
     width: 100%;
     max-width: 596px;
-
-    @include media(tablet) {
-      img {
-        aspect-ratio: 16/9;
-      }
-    }
   }
 
   h2,
@@ -126,6 +105,25 @@
   }
 
   @include media(tablet) {
+    &__inner {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+
+      &--reverse {
+        flex-direction: column;
+        margin-bottom: 35px;
+      }
+
+      &__content {
+        max-width: 100%;
+      }
+
+      img {
+        aspect-ratio: 16/9;
+      }
+    }
+
     br {
       display: none;
     }
