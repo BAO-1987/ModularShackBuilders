@@ -15,12 +15,6 @@
     z-index: 1;
     background: var(--gradient-white);
     inset: 0;
-
-    // @include media(tablet) {
-    //   width: 100%;
-    //   background-color: var(--color-white);
-    //   opacity: 0.8;
-    // }
   }
 
   &__inner {
